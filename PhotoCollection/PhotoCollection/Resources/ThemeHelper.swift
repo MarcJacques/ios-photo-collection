@@ -8,10 +8,33 @@
 import Foundation
 
 class ThemeHelper {
-    let themePreferenceKey: String
     
-    func setThemePreferenceDark() {
-        UserDefaults.standard.set(<#T##url: URL?##URL?#>, forKey: "Dark")
+    static let themePreferenceKey: String = ""
+    
+    let userDefaults = UserDefaults.standard
+    
+    var themePreference: String? {
+        return userDefaults.string(forKey: ThemeHelper.themePreferenceKey)
+     }
+    
+    
+    init() {
+        if themePreference == nil {
+            setThemePreferenceDark()
+        }
     }
     
+    
+    func setThemePreferenceDark() {
+        
+        userDefaults.set("Dark", forKey: ThemeHelper.themePreferenceKey)
+    }
+    
+    func setThemePreferenceToRed() {
+       
+        
+        userDefaults.set("Red", forKey: ThemeHelper.themePreferenceKey)
+    }
+    
+   
 }
