@@ -15,6 +15,10 @@
 		05E05EE5256430C300BBEDDE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05EE4256430C300BBEDDE /* Photo.swift */; };
 		05E05EE92564310500BBEDDE /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05EE82564310500BBEDDE /* PhotoController.swift */; };
 		05E05EEC2564337400BBEDDE /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05EEB2564337400BBEDDE /* ThemeHelper.swift */; };
+		05E05EEF25645E3900BBEDDE /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05EEE25645E3900BBEDDE /* PhotosCollectionViewController.swift */; };
+		05E05EF225645E4A00BBEDDE /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05EF125645E4A00BBEDDE /* PhotoCollectionViewCell.swift */; };
+		05E05EF525645E7400BBEDDE /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05EF425645E7400BBEDDE /* PhotoDetailViewController.swift */; };
+		05E05EF825645E8900BBEDDE /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E05EF725645E8900BBEDDE /* ThemeSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		05E05EE4256430C300BBEDDE /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		05E05EE82564310500BBEDDE /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		05E05EEB2564337400BBEDDE /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
+		05E05EEE25645E3900BBEDDE /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		05E05EF125645E4A00BBEDDE /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		05E05EF425645E7400BBEDDE /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		05E05EF725645E8900BBEDDE /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 		05E05EE2256430A500BBEDDE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				05E05EF125645E4A00BBEDDE /* PhotoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +118,9 @@
 		05E05EE3256430AE00BBEDDE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				05E05EEE25645E3900BBEDDE /* PhotosCollectionViewController.swift */,
+				05E05EF725645E8900BBEDDE /* ThemeSelectionViewController.swift */,
+				05E05EF425645E7400BBEDDE /* PhotoDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -186,7 +198,11 @@
 				05E05EE5256430C300BBEDDE /* Photo.swift in Sources */,
 				05E05ECA2564302E00BBEDDE /* AppDelegate.swift in Sources */,
 				05E05EE92564310500BBEDDE /* PhotoController.swift in Sources */,
+				05E05EEF25645E3900BBEDDE /* PhotosCollectionViewController.swift in Sources */,
+				05E05EF225645E4A00BBEDDE /* PhotoCollectionViewCell.swift in Sources */,
 				05E05EEC2564337400BBEDDE /* ThemeHelper.swift in Sources */,
+				05E05EF525645E7400BBEDDE /* PhotoDetailViewController.swift in Sources */,
+				05E05EF825645E8900BBEDDE /* ThemeSelectionViewController.swift in Sources */,
 				05E05ECC2564302E00BBEDDE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
