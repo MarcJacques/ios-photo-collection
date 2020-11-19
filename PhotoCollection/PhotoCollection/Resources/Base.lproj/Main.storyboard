@@ -55,6 +55,11 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="150" height="200"/>
+                                <connections>
+                                    <outlet property="imageView" destination="KJa-ZE-kyZ" id="Q5J-8v-1zu"/>
+                                    <outlet property="photoLabel" destination="kVO-IJ-SMK" id="jXK-RC-N3a"/>
+                                    <segue destination="OkF-EC-TVK" kind="show" identifier="PictureDetailShowSegue" id="Fyi-hL-Eul"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -101,6 +106,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLU-NO-fy3">
                                 <rect key="frame" x="171" y="481" width="72" height="30"/>
                                 <state key="normal" title="Add Photo"/>
+                                <connections>
+                                    <action selector="addPhotoButtonTapped:" destination="OkF-EC-TVK" eventType="touchUpInside" id="Lhi-iG-bwp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PO1-wr-U67"/>
@@ -117,7 +125,18 @@
                             <constraint firstItem="x4p-wc-8hp" firstAttribute="top" secondItem="5Xc-5M-U2d" secondAttribute="top" constant="139.5" id="v3n-Gh-6Ov"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aaL-Qf-nIf"/>
+                    <navigationItem key="navigationItem" id="aaL-Qf-nIf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="NrY-x9-nEO">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="OkF-EC-TVK" id="GOr-5J-Fud"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="LLU-NO-fy3" id="e5F-TZ-dPg"/>
+                        <outlet property="imageView" destination="x4p-wc-8hp" id="9E3-Z9-blS"/>
+                        <outlet property="photoTitleTextField" destination="6bz-gb-T8Z" id="UwR-oL-hOZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naP-il-oBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,12 +163,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLL-gT-u2z">
-                                <rect key="frame" x="72" y="179" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="72" y="179" width="33" height="30"/>
+                                <state key="normal" title="Dark"/>
+                                <connections>
+                                    <action selector="darkModeSelected:" destination="EfX-S1-wT1" eventType="touchUpInside" id="OCy-pb-kBH"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JX-h5-Jm4">
-                                <rect key="frame" x="275" y="179" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JX-h5-Jm4">
+                                <rect key="frame" x="262" y="179" width="59" height="30"/>
+                                <state key="normal" title="Red"/>
+                                <connections>
+                                    <action selector="redModeSelected:" destination="EfX-S1-wT1" eventType="touchUpInside" id="fn2-UL-sHJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iN5-7b-8yb"/>
@@ -192,6 +217,9 @@
             <point key="canvasLocation" x="-223.18840579710147" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fyi-hL-Eul"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
